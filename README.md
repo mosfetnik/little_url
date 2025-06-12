@@ -34,6 +34,7 @@ A lightweight, full-stack URL shortener built with **React.js** and **Supabase**
 ## 🌐 Live Demo
 
 > Coming Soon – Paste the deployed link here once ready
+[text](https://little-k8l3ht3gp-mosfetniks-projects.vercel.app/)
 
 ---
 
