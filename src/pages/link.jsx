@@ -1,15 +1,15 @@
 import DeviceStats from "@/components/device-stats";
 import Location from "@/components/location-stats";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
-import {UrlState} from "@/context";
-import {getClicksForUrl} from "@/db/apiClicks";
-import {deleteUrl, getUrl} from "@/db/apiUrls";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { UrlState } from "@/context";
+import { getClicksForUrl } from "@/db/apiClicks";
+import { deleteUrl, getUrl } from "@/db/apiUrls";
 import useFetch from "@/hooks/use-fetch";
-import {Copy, Download, LinkIcon, Trash} from "lucide-react";
-import {useEffect} from "react";
-import {useNavigate, useParams} from "react-router-dom";
-import {BarLoader, BeatLoader} from "react-spinners";
+import { Copy, Download, LinkIcon, Trash } from "lucide-react";
+import { useEffect } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { BarLoader, BeatLoader } from "react-spinners";
 
 const LinkPage = () => {
   const downloadImage = () => {
@@ -31,14 +31,14 @@ const LinkPage = () => {
     document.body.removeChild(anchor);
   };
   const navigate = useNavigate();
-  const {user} = UrlState();
-  const {id} = useParams();
+  const { user } = UrlState();
+  const { id } = useParams();
   const {
     loading,
     data: url,
     fn,
     error,
-  } = useFetch(getUrl, {id, user_id: user?.id});
+  } = useFetch(getUrl, { id, user_id: user?.id });
 
   const {
     loading: loadingStats,
@@ -46,7 +46,7 @@ const LinkPage = () => {
     fn: fnStats,
   } = useFetch(getClicksForUrl, id);
 
-  const {loading: loadingDelete, fn: fnDelete} = useFetch(deleteUrl, id);
+  const { loading: loadingDelete, fn: fnDelete } = useFetch(deleteUrl, id);
 
   useEffect(() => {
     fn();
@@ -76,11 +76,11 @@ const LinkPage = () => {
             {url?.title}
           </span>
           <a
-            href={`https://trimrr.in/${link}`}
+            href={`https://https://trendtoday360.com/${link}`}
             target="_blank"
             className="text-3xl sm:text-4xl text-blue-400 font-bold hover:underline cursor-pointer"
           >
-            https://trimrr.in/{link}
+            https://https://trendtoday360.com/{link}
           </a>
           <a
             href={url?.original_url}
@@ -97,7 +97,9 @@ const LinkPage = () => {
             <Button
               variant="ghost"
               onClick={() =>
-                navigator.clipboard.writeText(`https://trimrr.in/${link}`)
+                navigator.clipboard.writeText(
+                  `https://https://trendtoday360.com/${link}`
+                )
               }
             >
               <Copy />
